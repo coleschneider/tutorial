@@ -1,2 +1,16 @@
+import React from "react";
+import {render} from "react-dom";
 import "./style.scss";
-console.log("hello, world");
+
+
+
+const App = () => (
+  <h1>
+    app
+  </h1>
+)
+
+render(
+  <App />,
+  document.getElementById("root")
+)
