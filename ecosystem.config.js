@@ -11,7 +11,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:coleschneider/tutorial.git',
       path: '/home/ubuntu/tutorial',
-      'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
+      'post-deploy': 'npm install && npm run-script build && pm2 startOrRestart ecosystem.config.js'
     }
   }
 }
