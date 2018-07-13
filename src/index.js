@@ -7,22 +7,19 @@ import configureStore from './configureStore'
 import {AppContainer} from "react-hot-loader";
 import {Provider} from 'react-redux';
 const store = configureStore()
-const rootElement = document.getElementById('root');
+
 function render(Component) {
   ReactDOM.render(
     <Provider store={store}>
       <Router>
-        
           <Component />
-        
       </Router>
     </Provider>,
-    rootElement
+    document.getElementById("root")
   );
 }
 
-
-if (module.hot) {
+if(process.env.NODE_ENV !=="production" && module.hot){
   module.hot.accept('./components/App', () => {
     render(require('./components/App').default);
   });
