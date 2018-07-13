@@ -11,7 +11,7 @@ const errorhandler = require('errorhandler');
 const mongoose = require('mongoose');
 const dotenv = require("dotenv")
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 // API calls
 const webpack = require("webpack");
