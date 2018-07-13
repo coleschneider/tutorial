@@ -1,12 +1,18 @@
 import React from "react";
 import {render} from "react-dom";
+import {connect} from 'react-redux'
 
 
-
-
-const App = () => (
-  <h1>
-    app
-  </h1>
+const increment = () => ({
+  type: "DECREMENT"
+})
+const App = (props) => (
+  <button onClick={() => props.increment()}>
+    {props.counter}
+    Button
+  </button>
 )
-export default App
+
+
+
+export default connect(state => ({...state}), {increment})(App)
