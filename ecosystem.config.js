@@ -1,7 +1,10 @@
 module.exports = {
   apps: [{
     name: 'tutorial-2',
-    script: './index.js'
+    script: './index.js',
+    env: {
+      "NODE_ENV": "production",
+    }
   }],
   deploy: {
     production: {
