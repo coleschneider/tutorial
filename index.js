@@ -85,6 +85,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 }
+
 else {
 
   app.use(express.static(path.join(__dirname, 'dist')));
@@ -96,6 +97,6 @@ else {
 }
 
 
-console.log(process.env.NODE_ENV)
+console.log("NODE_ENV", process.env.NODE_ENV)
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
