@@ -4,6 +4,7 @@ module.exports = {
     script: './index.js',
     env: {
       "NODE_ENV": "production",
+      "MONGO_URL":"mongodb://admin:root@localhost:27017/wwprod"
     }
   }],
   deploy: {

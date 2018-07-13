@@ -43,7 +43,8 @@ app.use(cookieSession({
 dotenv.load();
 
 // var configDB = require('./config/config').db
-mongoose.connect('mongodb://admin:root@localhost:27017/wwprod', {
+
+mongoose.connect(process.env.MONGO_URL, {
   useMongoClient: true
 })
 
